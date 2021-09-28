@@ -1,16 +1,18 @@
 
 download the docker desktop before running the below commands
 #commands to create the image:
-docker build -t docker/hello-world-rest-api:dockerfile1 .
-    -t-> tag(dockerfile1)
 
+to pull the docker image from docker hub: docker pull pasalurakesh123/hello-world-rest-api
+Build image through docker file: docker build -t docker/hello-world-rest-api:dockerfile1 .
+    -t-> tag(dockerfile1)
+to push the docker image: docker push pasalurakesh123/hello-world-rest-api:dockerfile1
 some basic docker commands
 docker
 --------------
 images/image -> static file which we download.
 container-> when we run the image it is called container.
 commands
-1. docker run -p 8081:8080 -d docker/hello-world-rest-api:dockerfile1
+1. docker run -p 8081:8080 -d pasalurakesh123/hello-world-rest-api:dockerfile1
    -p port and -d detatched(run the app in background without logs)
 2. docker logs [container id]-> gives till the last log
 3. docker logs -f [container-id] -> gives logs in live
@@ -35,3 +37,7 @@ commands
 20. docker build -t docker/hello-world-rest-api:dockerfile1 . ->
     -t-> tag(dockerfile1)
 21. docker history docker/hello-world-rest-api:dockerfile1 ->provides the history of the image
+
+
+docker commands
+https://www.linkedin.com/pulse/docker-commandcheatsheet-sandeep-kumar-patel
